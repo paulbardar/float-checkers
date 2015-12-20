@@ -1,0 +1,133 @@
+* {
+	margin:0;
+	padding:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	transition: all 0.3s ease-in;
+}
+body {
+	background:fuchsia;
+	margin-top:50px;
+}
+.checkers {
+	padding: 20px;
+	max-width:80%;
+	width: 600px;
+	height: 600px;
+	margin: 0 auto;
+	border:3px solid #AEAEAE;
+	background: #FFF;
+}
+.checkers-desk {
+	width: 560px;
+	height: 560px;
+	border: 3px solid  #AEAEAE;
+}
+.row {
+	float: left;
+	width: 100%;
+	height: 12.5%;
+	left: 0;
+	background:#FFF;
+}
+.checkers-desk .cell {
+	margin: 0 auto;
+	width: 12.5%;
+	height: 100%;
+	float: left;
+}
+.row:nth-child(odd) .cell:nth-child(odd) {
+	background: #AEAEAE;
+}
+.row:nth-child(even) .cell:nth-child(even) {
+	background: #AEAEAE;
+}
+.row-1 .cell:nth-child(odd)::after,
+.row-2 .cell:nth-child(even)::after,
+.row-3 .cell:nth-child(odd)::after {
+	content:"";
+	float: left;
+	margin: 10%;
+	width: 75%;
+	height: 75%;
+	border-radius: 50%;
+	background: fuchsia;
+	box-shadow: 1px 2px 2px;
+}
+.row-1 .cell:nth-child(odd):hover::after,
+.row-2 .cell:nth-child(even):hover::after,
+.row-3 .cell:nth-child(odd):hover::after {
+	transform: translate(30%, 30%);
+}
+.row-6 .cell:nth-child(even)::after,
+.row-7 .cell:nth-child(odd)::after,
+.row-8 .cell:nth-child(even)::after {
+	content:"";
+	float: left;
+	margin: 10%;
+	width: 75%;
+	height: 75%;
+	border-radius: 50%;
+	background: #DADBDA;
+	box-shadow: 1px 2px 2px;
+}
+.row-6 .cell:nth-child(even):hover::after,
+.row-7 .cell:nth-child(odd):hover::after,
+.row-8 .cell:nth-child(even):hover::after {
+	transform: translate(-30%, -30%);
+}
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+}
